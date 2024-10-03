@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Project Management Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
+    <style>
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+
+        .page-header {
+            margin-bottom: 40px;
+        }
+
+        .form-control {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn {
+            width: 120px;
+            margin-right: 20px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header text-center">
+            <h2>Project Management Form (Micro Project)</h2>
+        </div>
+        <form id="Prjform" method="get">
+            <div class="form-group">
+                <label for="proID">Project-ID:</label>
+                <input type="text" class="form-control" id="proID" placeholder="Enter Project ID" required onchange="getPro()">
+            </div>
+            <div class="form-group">
+                <label for="proname">Project-Name:</label>
+                <input type="text" class="form-control" id="proname" placeholder="Enter Project Name" required>
+            </div>
+            <div class="form-group">
+                <label for="proemp">Assigned-To:</label>
+                <input type="text" class="form-control" id="proemp" placeholder="Enter The Name of the person" required>
+            </div>
+            <div class="form-group">
+                <label for="prodate">Assignment-Date:</label>
+                <input type="date" class="form-control" id="prodate" required>
+            </div>
+            <div class="form-group">
+                <label for="deadline">Deadline:</label>
+                <input type="date" class="form-control" id="deadline" required>
+            </div>
+
+            <div class="btn-group">
+                <input type="button" class="btn btn-primary" id="save" value="Save" onclick="saveData();">
+                <input type="button" class="btn btn-warning" id="change" value="Change" onclick="changeData();">
+                <input type="button" class="btn btn-danger" id="reset" value="Reset" onclick="resetForm();">
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
